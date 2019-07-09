@@ -7,25 +7,25 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-BaseLink.destroy_all
-UserLink.destroy_all
+Baselink.destroy_all
+Userlink.destroy_all
 
 user_1 = User.create(username: "blue")
 user_2 = User.create(username: "green")
 user_3 = User.create(username: "red")
 
-site_1 = BaseLink.create(url: "facebook.com", image: "blah")
-site_2 = BaseLink.create(url: "twitter.com", image: "greaaaat")
-site_3 = BaseLink.create(url: "instagram.com", image: "yada")
-site_4 = BaseLink.create(url: "tumblr.com", image: "surrrreee")
+site_1 = Baselink.create(url: "facebook.com", image: "blah")
+site_2 = Baselink.create(url: "twitter.com", image: "greaaaat")
+site_3 = Baselink.create(url: "instagram.com", image: "yada")
+site_4 = Baselink.create(url: "tumblr.com", image: "surrrreee")
 
-link_1 = UserLink.create(user_id: user_1.id, baseLink_id: site_1.id, ending: "blueboy")
-link_2 = UserLink.create(user_id: user_1.id, baseLink_id: site_2.id, ending: "blueboy")
-link_3 = UserLink.create(user_id: user_1.id, baseLink_id: site_3.id, ending: "blueboy")
-link_4 = UserLink.create(user_id: user_1.id, baseLink_id: site_4.id, ending: "blueboy")
-link_5 = UserLink.create(user_id: user_2.id, baseLink_id: site_2.id, ending: "greenboy")
-link_6 = UserLink.create(user_id: user_2.id, baseLink_id: site_3.id, ending: "greenboy")
-link_7 = UserLink.create(user_id: user_2.id, baseLink_id: site_4.id, ending: "greenboy")
-link_8 = UserLink.create(user_id: user_3.id, baseLink_id: site_2.id, ending: "redboy")
-link_9 = UserLink.create(user_id: user_3.id, baseLink_id: site_2.id, ending: "redfanpageboy")
-link_10 = UserLink.create(user_id: user_3.id, baseLink_id: site_3.id, ending: "redboy")
+link_1 = Userlink.create(user_id: user_1.id, baselink_id: site_1.id, url: "blueboy")
+link_2 = Userlink.create(user_id: user_1.id, baselink_id: site_2.id, url: "blueboy")
+link_3 = Userlink.create(user_id: user_1.id, baselink_id: site_3.id, url: "blueboy")
+link_4 = Userlink.create(user_id: user_1.id, baselink_id: site_4.id, url: "blueboy")
+link_5 = Userlink.create(user_id: user_2.id, baselink_id: site_2.id, url: "greenboy")
+link_6 = Userlink.create(user_id: user_2.id, baselink_id: site_3.id, url: "greenboy")
+link_7 = Userlink.create(user_id: user_2.id, baselink_id: site_4.id, url: "greenboy")
+link_8 = Userlink.create(user_id: user_3.id, baselink_id: site_2.id, url: "redboy")
+link_9 = Userlink.create(user_id: user_3.id, baselink_id: site_2.id, url: "redfanpageboy")
+link_10 = Userlink.create(user_id: user_3.id, baselink_id: site_3.id, url: "redboy")

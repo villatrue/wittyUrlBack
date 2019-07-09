@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-    has_many :userLinks
-    has_many :baseLinks, through: :userLinks
+    has_many :userlinks
+    has_many :baselinks, through: :userlinks
 end

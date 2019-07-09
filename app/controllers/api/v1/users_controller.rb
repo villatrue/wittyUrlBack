@@ -3,16 +3,17 @@ class Api::V1::UsersController < ApplicationController
         users = User.all
         render json: users
         # (:include => {
-        #   :userLink => {:only => [:id, :ending]},
-        #   :baseLink => {:only => [:id, :url, :img]}
+        #   :userlink => {:only => [:id, :ending]},
+        #   :baselink => {:only => [:id, :url, :img]}
         # }, :except => [:updated_at, :created_at])
     end
      
     def show
         user = User.find_by(id: params[:id])
-        render json: user.to_json(:include => {
-            :userLink => {:only => [:id, :ending]},
-            :baseLink => {:only => [:id, :url, :img]}
-        }, :except => [:updated_at, :created_at])
+        render json: user
+        #  user.to_json(:include => {
+        #     :userlink => {:only => [:id, :ending]},
+        #     :baselink => {:only => [:id, :url, :img]}
+        # }, :except => [:updated_at, :created_at])
     end
 end
