@@ -3,4 +3,10 @@ class Api::V1::BaselinksController < ApplicationController
         baselinks = Baselink.all
         render json: baselinks
     end
+
+    def show
+        baselink = Baselink.find_by(id: params[:id])
+        render json: baselink
+    end
+
 end
