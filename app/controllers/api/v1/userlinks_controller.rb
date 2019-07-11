@@ -1,15 +1,17 @@
 class Api::V1::UserlinksController < ApplicationController
     def new
         userlink = Userlink.new
+        render json: userlink
     end
 
     def create
-        userlink = userlink.new(userlink_params)
+        userlink = Userlink.create(userlink_params)
+        render json: userlink
     end
 
     private
 
     def userlink_params
-        params.require(:userlink).permit(:user_id, :userlink_id, :url)
+        params.require(:userlink).permit(:user_id, :baselink_id, :url)
     end
 end
