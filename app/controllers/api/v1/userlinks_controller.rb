@@ -5,7 +5,7 @@ class Api::V1::UserlinksController < ApplicationController
     end
 
     def create
-        userlink = Userlink.create(userlink_params)
+        userlink = Userlink.createrail(userlink_params)
         render json: userlink
     end
 
